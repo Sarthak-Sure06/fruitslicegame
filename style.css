@@ -24,12 +24,14 @@ html{
     box-shadow: 0px 4px #9da853;
 }
 
-#question{
+#fruitcontainer{
     width: 800px;
     height: 600px;
     margin: 80px auto 10px auto;
     background-color: white;
     box-shadow: 0px 4px ;
+    position: relative;
+    overflow: hidden;
 }
 
 #instructions{
@@ -79,6 +81,7 @@ html{
     background-color: #f1ff92;
     border-radius: 3px;
     box-shadow: 0px 4px rgba(0,0,0,0.2);
+    display: none;
 }
 
 
@@ -95,4 +98,16 @@ html{
     left: 200px;
     z-index: 10;
     display: none;
+}
+
+.life{
+    width: 28px;
+    height: 25px;
+    margin: 0 4px 2px 2px;
+    
+}
+
+.fruits{
+    display: none;
+    position: absolute;
 }

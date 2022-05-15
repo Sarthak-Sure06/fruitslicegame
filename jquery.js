@@ -1,6 +1,7 @@
 var playing = false;
 var score;
 var trialleft;
+var fruits = ['apple' , 'bananas' , 'cherries' , 'grapes' , 'mango' , 'pineapple' , 'watermelon'];
 
 $(function(){
 
@@ -24,6 +25,9 @@ $(function(){
            for(i = 0; i<trialleft ; i++){
               $("trialleft").append("x");
               addHearts();
+
+              $("#start").html("Reset Game");
+              startAction();
            }
        
         }
@@ -32,6 +36,16 @@ $(function(){
 
 function addHearts(){
    for(i=0;i<trialleft;i++){
-      $("#trialleft").append("x");
+      $("#trialleft").append('<img src = "images/hearts.png" class = "life">');
    }
+}
+
+function startAction(){
+   $("#fruits1").show();
+   chooseFruit();
+   $('#fruits1').css({'left' : 300, 'top' : -100});
+}
+
+function chooseFruit(){
+   $("#fruits1").attr('src', 'images/' + fruits[Math.round(6*Math.random())] + '.png' );
 }
